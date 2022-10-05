@@ -96,8 +96,8 @@ body{
         height: 70vh;
     }  
     .cards .card {
-        height: calc(100% / 4 - 10px);
-        width: calc(100%/ 5 - 10px);
+        height: calc(100% / 5 - 10px);
+        width: calc(100%/ 4 - 10px);
     }
 }
 
