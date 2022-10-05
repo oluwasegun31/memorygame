@@ -103,7 +103,7 @@ body{
     }
 }
 .congrats{
-    /* display: none; */
+    display: none;
     position: absolute;
     background: #b73dfd;
     padding: 10px;
