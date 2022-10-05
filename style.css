@@ -12,6 +12,7 @@ body{
     width: 100%;
     min-height: 100vh;
     background: #b73dfd;
+    overflow-x: hidden;
 }
 .logo{
     position: absolute;
@@ -102,30 +103,34 @@ body{
     }
 }
 .congrats{
-    display: none;
+    /* display: none; */
     position: absolute;
-    top: 45%;
-    left: 33%;
     background: #b73dfd;
     padding: 10px;
     font-size: 60px;
     border-radius: 10px;
     color: #fdc03d;
-    animation: rotate 4s ease-in-out;
+    animation: rotate 2.5s ease-in infinite forwards;
 }
 .congrats.start{
     transition: all 0.4s ease-in-out;
     display: block;
 }
 @keyframes rotate {
-    0%{
-        transform: rotate(0);
+    0%, 100%{
+        transform: translateX(0);
     }
-    50%{
-        transform: rotate(180deg);
+    20%{
+        transform: translateX(30px);
     }
-    100%{
-        transform: rotate(360deg);
+    40%{
+        transform: translateX(-30px)
+    }
+    60%{
+        transform: translateX(10px);
+    }
+    80%{
+        transform: translateX(-10px)
     }
 }
 
@@ -140,7 +145,6 @@ body{
     }
     .congrats{
         font-size: 36px;
-        left: 20%;
     }
 }
 
@@ -156,6 +160,5 @@ body{
     }
     .congrats{
         font-size: 30px;
-        left: 10%;
     }
 }
