@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll(".card")
+const congrats = document.querySelector(".congrats")
 let cardOne, cardTwo;
 let cardDisbale = false
 let cardMatch = 0
@@ -29,9 +30,13 @@ function matchCards(img1, img2){
     if(img1 === img2){ //// condition for if the two clicked cards match
         cardMatch++ /// increasing the val by 1
         if(cardMatch == 10){ /// val == 10 means 10*2 = 20 total cards
-            setTimeout(() => {
-                return cardShuffle()
-            }, 1000); //// calling the shuffle card after 1 sec
+            congrats.classList.add("start")
+            setTimeout(()=>{
+                congrats.classList.remove("start")
+                setTimeout(() => {
+                    return cardShuffle()
+                }, 500); //// calling the shuffle card after 1 sec
+            }, 4500)
         }
         cardOne.removeEventListener('click', openCard)
         cardTwo.removeEventListener('click', openCard)

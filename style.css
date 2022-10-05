@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nova Flat';
 }
 body{
     display: flex;
@@ -10,6 +12,16 @@ body{
     width: 100%;
     min-height: 100vh;
     background: #b73dfd;
+}
+.logo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(250deg, #fdc03d, #fff);
+    color: transparent;
+    -webkit-background-clip: text;
 }
 .container{
     width: 525px;
@@ -89,6 +101,33 @@ body{
         transform: translateY(5px);
     }
 }
+.congrats{
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 33%;
+    background: #b73dfd;
+    padding: 10px;
+    font-size: 60px;
+    border-radius: 10px;
+    color: #fdc03d;
+    animation: rotate 4s ease-in-out;
+}
+.congrats.start{
+    transition: all 0.4s ease-in-out;
+    display: block;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 
 @media (max-width: 500px) {
     .container{
@@ -98,6 +137,10 @@ body{
     .cards .card {
         height: calc(100% / 5 - 10px);
         width: calc(100%/ 4 - 10px);
+    }
+    .congrats{
+        font-size: 36px;
+        left: 20%;
     }
 }
 
@@ -110,5 +153,9 @@ body{
     .cards .card {
         height: calc(100% / 5 - 5px);
         width: calc(100%/ 4 - 5px);
+    }
+    .congrats{
+        font-size: 30px;
+        left: 10%;
     }
 }
